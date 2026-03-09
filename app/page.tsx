@@ -3,7 +3,11 @@
 import { Profiler } from "react"
 import Image from "next/image"
 
-function onRender(id, phase, actualDuration) {
+function onRender(
+  id: string,
+  phase: "mount" | "update" | "nested-update",
+  actualDuration: number
+) {
   console.log(`${id} demorou ${actualDuration}ms`)
 }
 
